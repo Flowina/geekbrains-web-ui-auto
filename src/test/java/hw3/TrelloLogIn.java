@@ -33,7 +33,7 @@ public class TrelloLogIn {
 
     private void loginTest() throws InterruptedException {
         webDriver.navigate().to("https://trello.com/");
-        webElement = webDriver.findElement(By.xpath("//*[text()='Log in']/parent::*"));
+        webElement = webDriver.findElement(By.xpath("//*[text()='Log in' or text()='Войти']/parent::*"));
         webElement.click();
         Thread.sleep(5000);
         webElement = webDriver.findElement(By.id("user"));
