@@ -25,10 +25,11 @@ public abstract class AbstractBaseTest {
         webDriver.manage().timeouts()
                 .implicitlyWait(10, TimeUnit.SECONDS);
     }
+
     protected void loginTest() throws InterruptedException {
         webDriver.navigate().to("https://trello.com/en");
-        webDriver.manage().addCookie(new Cookie("lang","en"));
-       // webDriver.manage().deleteCookieNamed("lang");
+        webDriver.manage().addCookie(new Cookie("lang", "en"));
+        // webDriver.manage().deleteCookieNamed("lang");
         webElement = webDriver.findElement(By.xpath("//a[text()='Log in']"));
         webElement.click();
         Thread.sleep(5000);
@@ -38,8 +39,8 @@ public abstract class AbstractBaseTest {
         Thread.sleep(5000);
         webDriver.findElement(By.id("password")).sendKeys("trello2307");
         webDriver.findElement(By.id("login-submit")).click();
-
     }
+
     @AfterMethod
     public void clear() {
         webDriver.quit();
