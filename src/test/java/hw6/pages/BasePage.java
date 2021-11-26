@@ -14,10 +14,5 @@ public class BasePage {
         this.webDriverWait = new WebDriverWait(driver, 5);
         PageFactory.initElements(driver, this);
     }
-
-    @AfterMethod
-    public void clear() {
-        driver.quit();
-    }
 }
 

@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="trelloTests">
+    <test name="allTests">
+<!--        <packages>-->
+<!--            <package name="hw6.tests"/>-->
+<!--        </packages>-->
+        <classes>
+            <class name="hw6.tests.CreateNewBoardTest">
+                <methods>
+                    <include name="createNewBoardTest" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

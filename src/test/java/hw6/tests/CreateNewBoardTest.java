@@ -2,31 +2,14 @@ package hw6.tests;
 
 import hw6.pages.CreateNewBoardPage;
 import hw6.pages.LoginPage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import java.util.concurrent.TimeUnit;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CreateNewBoardTest {
+public class CreateNewBoardTest extends AbstratBaseTest {
     private CreateNewBoardPage createBoardPage;
     private LoginPage loginPage;
-    private WebDriver driver;
-
-    @BeforeTest
-    public void setup() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-        ChromeOptions chromeoptions = new ChromeOptions();
-        chromeoptions.addArguments("–lang= en");
-        driver = new ChromeDriver(chromeoptions);
-        driver.manage().window().maximize();
-        driver.manage().timeouts()
-                .implicitlyWait(10, TimeUnit.SECONDS);
-    }
 
     @BeforeMethod(alwaysRun = true)
     public void initPage() {
@@ -46,3 +29,6 @@ public class CreateNewBoardTest {
     }
 
 }
+
+
+
