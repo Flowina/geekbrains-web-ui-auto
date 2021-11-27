@@ -1,5 +1,6 @@
 package hw6.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,12 +27,14 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
+    @Step("Open Log in page")
     public void open() {
         driver.navigate().to(URL);
         driver.manage().addCookie(new Cookie("lang", "en"));
 
     }
 
+    @Step("Log in as '{0}' with password '{1}'")
     public void logIn(String email, String password) throws InterruptedException {
         this.email.sendKeys(email);
         logInWithAtlassianButton.click();

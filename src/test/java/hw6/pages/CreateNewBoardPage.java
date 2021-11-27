@@ -1,5 +1,6 @@
 package hw6.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -30,6 +31,7 @@ public class CreateNewBoardPage extends BasePage {
         super(driver);
     }
 
+    @Step("Create new board with name '{0}'")
     public void createBoard(String boardName) throws InterruptedException {
         //WebDriverWait webDriverWait = new WebDriverWait(driver, 15);
         //webDriverWait.until(ExpectedConditions.visibilityOf(createButton));

@@ -2,11 +2,15 @@ package hw6.tests;
 
 import hw6.pages.CreateNewBoardPage;
 import hw6.pages.LoginPage;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Epic("Trello")
+@Feature("Create board")
 public class CreateNewBoardTest extends AbstratBaseTest {
     private CreateNewBoardPage createBoardPage;
     private LoginPage loginPage;

@@ -5,6 +5,11 @@
 <!--            <package name="hw6.tests"/>-->
 <!--        </packages>-->
         <classes>
+            <class name="hw6.tests.TrelloLoginTest">
+                <methods>
+                    <include name="trelloLoginTest" />
+                </methods>
+            </class>
             <class name="hw6.tests.CreateNewBoardTest">
                 <methods>
                     <include name="createNewBoardTest" />
